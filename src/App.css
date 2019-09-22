@@ -1,0 +1,103 @@
+p{
+  margin : 0;
+}
+
+.main {
+  background-image: url("./img/greens.jpg");
+  background-position:  center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 665px;
+}
+
+
+.shadowwarapper{
+  background: -moz-linear-gradient(left, black 0%, black 20%, transparent 100%);
+  background: -webkit-linear-gradient(left, black 0%, black 20%, transparent 100%);
+  background: linear-gradient(to right, black 0%, black 20%, transparent 100%);
+  color: white;
+  padding-left: 50px;
+  padding-right: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template: auto / 1.5fr 1fr;
+  grid-template-areas: 
+    ". ."
+    "heading heading"
+    "content ."
+    "buttons buttons";
+  row-gap: 40px;
+  height: -webkit-fill-available;
+}
+
+h1{
+  font-family: "roboto-black", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -.2rem;
+  font-size: 6rem;
+  line-height: 1;
+  margin: 0px;
+  padding-top: 2.4rem;
+}
+
+.heading{
+  grid-area: heading;
+}
+
+.contents{
+  grid-area: content;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.3);
+  font-family: "roboto-regular", sans-serif;
+  font-size: 1.5rem;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.buttons{
+  grid-area: buttons;
+  padding-top: 10px;
+  justify-items: center;
+}
+
+.button{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 25px 42px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px 4px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px){
+  .grid {
+    grid-template: auto / 1fr;
+    row-gap: 10px;
+  }
+
+  .main{
+    height: 660px;
+  }
+
+  .contents{
+    font-size: 4.5vw;
+    padding-top: 5px;
+  }
+
+  h1{
+    font-size: 14vw;
+  }
+
+  .button{
+    padding: 15px 32px;
+    margin: 4px 4px;
+  }
+}
